@@ -1,0 +1,31 @@
+.indent-group {
+  padding-top: 25px;
+}
+
+.indent-group__title {
+  font-weight: 900;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.indent-group__text {
+  margin-bottom: 30px;
+}
+
+.indent-group__figure {
+  margin-bottom: 30px;
+}
+
+.indent-group__figure_last {
+  margin-bottom: 0;
+}
+
+.indent-group__image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indent-group__image_img {
+  margin-bottom: 30px;
+}

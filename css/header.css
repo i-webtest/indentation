@@ -1,0 +1,46 @@
+.header {
+  padding-top: 60px;
+  margin-bottom: 25px;
+}
+
+.header__content {
+  margin-bottom: 50px;
+}
+
+.header__title {
+  font-weight: 900;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.header__description:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+
+.header__wrapper {
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  padding: 25px 45px;
+}
+
+.header__wrapper-title {
+  font-weight: 700;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.navigation__list {
+  color: #02535F;
+  padding-left: 25px;
+}
+
+.navigation__item {
+  width: max-content;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 10px;
+}
+
+.navigation__item:last-child {
+  margin-bottom: 0;
+}

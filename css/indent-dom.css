@@ -1,0 +1,51 @@
+.indent-dom {
+  padding-top: 25px;
+  margin-bottom: 25px;
+}
+
+.indent-dom__title {
+  font-weight: 900;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.indent-dom__text {
+  margin-bottom: 30px;
+}
+
+.indent-dom__text_gray {
+  color: #5E5E5E;
+  border: 1px solid #000000;
+  border-top: none;
+  padding: 15px 30px;
+  margin-bottom: 0;
+}
+
+.indent-dom__text_last {
+  margin-bottom: 0;
+}
+
+.indent-dom__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.indent-dom__image_small {
+  display: block;
+  width: 600px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indent-dom__image_spit {
+  display: block;
+  line-height: 0;
+  margin-bottom: 0;
+}
+
+.indent-dom__figure{
+  margin-bottom: 30px;
+}
