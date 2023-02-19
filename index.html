@@ -24,10 +24,10 @@
     <title>Отступы в вёрстке</title>
   </head>
   <body>
-    <section class="header">
-      <div class="container">
-        <div class="wrapper header__content">
-          <article>
+    <article class="article-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="wrapper header__content">
             <h1 class="header__title">Отступы в вёрстке: margin и padding</h1>
 
             <p class="header__description">
@@ -42,32 +42,30 @@
               особенно важны для начинающих, но также будут полезным напоминанием и для более опытных верстальщиков.
               Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.
             </p>
-          </article>
+          </div>
+
+          <div class="header__wrapper">
+            <p class="header__wrapper-title">Содержание:</p>
+
+            <nav class="header__navigation navigation">
+              <ol class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#indent" class="navigation__link"> Отступ задается от предыдущего элемента к следующему </a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#indent-dom" class="navigation__link">
+                    Отступ задается последнему возможному элементу в DOM-дереве
+                  </a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#indent-goup" class="navigation__link"> Для последнего элемента группы отступ обнуляется </a>
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </header>
 
-        <div class="header__wrapper">
-          <h2 class="header__wrapper-title">Содержание:</h2>
-
-          <nav class="header__navigation navigation">
-            <ol class="navigation__list">
-              <li class="navigation__item">
-                <a href="#indent" class="navigation__link"> Отступ задается от предыдущего элемента к следующему </a>
-              </li>
-              <li class="navigation__item">
-                <a href="#indent-dom" class="navigation__link">
-                  Отступ задается последнему возможному элементу в DOM-дереве
-                </a>
-              </li>
-              <li class="navigation__item">
-                <a href="#indent-goup" class="navigation__link"> Для последнего элемента группы отступ обнуляется </a>
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <main class="main">
       <section class="indent" id="indent">
         <div class="container">
           <div class="wrapper">
@@ -75,12 +73,10 @@
               Отступ задается от предыдущего элемента к следующему: от первого ко второму, сверху вниз, слева направо.
             </h2>
 
-            <ul class="indent__list">
-              <li class="indent__item">
-                <img class="indent__img" src="img/margin-img.jpg" alt="Картинка с примерами margin" />
-              </li>
+            <div class="indent__block">
+              <img class="indent__img indent__img_margin" src="img/margin-img.jpg" alt="Картинка с примерами margin" />
 
-              <li class="indent__item">
+              <div class="indent__block-text">
                 <p class="indent__text">
                   <span class="strong">ВАЖНО:</span> <span class="cursive">margin</span> всегда задают от предыдущего
                   элемента к следующему.
@@ -101,9 +97,11 @@
                   Для <span class="cursive">padding</span> верно обратное. Исключением является его применения в
                   декоративных целях, например, для увеличения области ссылки.
                 </p>
-              </li>
+              </div>
+            </div>
 
-              <li class="indent__item">
+            <div>
+              <div class="indent__block-text indent__block-text_left">
                 <p class="indent__text">
                   Отступ внутри блока сверху или слева реализуется через <span class="cursive">padding-top</span> и
                   <span class="cursive">padding-left</span> родителя.
@@ -118,12 +116,10 @@
                   Изначально элемент статичен, а его положение может меняться только под воздействием свойств других
                   блоков или свойств родителя.
                 </p>
-              </li>
+              </div>
 
-              <li class="indent__item">
-                <img class="indent__img" src="img/padding-img.jpg" alt="Картинка с примерами padding" />
-              </li>
-            </ul>
+              <img class="indent__img" src="img/padding-img.jpg" alt="Картинка с примерами padding" />
+            </div>
           </div>
         </div>
       </section>
@@ -133,35 +129,35 @@
           <div class="wrapper">
             <h2 class="indent-dom__title">Отступ задается последнему возможному элементу в DOM-дереве</h2>
 
-            <p class="indent-dom__text">
-              Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот
-              список:
-            </p>
+            <figure>
+              <figcaption class="indent-dom__text">
+                Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на
+                этот список:
+              </figcaption>
 
-            <img class="indent-dom__image" src="img/indent-dom1.jpg" alt="Скриншот с примером" />
+              <img class="indent-dom__image" src="img/indent-dom1.jpg" alt="Скриншот с примером" />
 
-            <img
-              class="indent-dom__image indent-dom__image_small"
-              src="img/indent-dom2.jpg"
-              alt="Картинка с полезными рецептами"
-            />
+              <img
+                class="indent-dom__image indent-dom__image_small"
+                src="img/indent-dom2.jpg"
+                alt="Картинка с полезными рецептами"
+              />
+            </figure>
 
-            <p class="indent-dom__text">Отступ делают за счёт соседних элементов, а не дочерних:</p>
-
-            <!-- <div class="indent-dom__wrapper"> -->
             <figure class="indent-dom__figure">
+              <figcaption class="indent-dom__text">Отступ делают за счёт соседних элементов, а не дочерних:</figcaption>
+
               <img
                 class="indent-dom__image indent-dom__image_spit"
                 src="img/indent-dom3.jpg"
                 alt="Скриншот с примером"
               />
 
-              <figcaption class="indent-dom__text indent-dom__text_gray">
+              <p class="indent-dom__text indent-dom__text_gray">
                 <span class="strong">ВАЖНО</span>: здесь <span class="cursive">.list-item</span> — последний возможный
                 элемент в котором мы задаём отступ, чтобы разделить списки.
-              </figcaption>
+              </p>
             </figure>
-            <!-- </div> -->
 
             <p class="indent-dom__text">
               Казалось бы, можно задать отступ параграфу <span class="cursive">&lt;p&gt;</span>, либо обёртке
@@ -173,14 +169,16 @@
               Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.
             </p>
 
-            <img class="indent-dom__image" src="img/indent-dom4.jpg" alt="Скриншот с примером" />
+            <figure>
+              <img class="indent-dom__image" src="img/indent-dom4.jpg" alt="Скриншот с примером" />
 
-            <p class="indent-dom__text">
-              В случае с заголовком, если ему необходим отступ сверху, последним элементом будет
-              <span class="cursive">section</span>. Именно для него задается <span class="cursive">padding-top</span>, а
-              не <span class="cursive">div</span> с классом <span class="cursive">container</span>. Свойства
-              <span class="cursive">margin</span>, которые стоят по умолчанию необходимо обнулить.
-            </p>
+              <figcaption class="indent-dom__text">
+                В случае с заголовком, если ему необходим отступ сверху, последним элементом будет
+                <span class="cursive">section</span>. Именно для него задается <span class="cursive">padding-top</span>,
+                а не <span class="cursive">div</span> с классом <span class="cursive">container</span>. Свойства
+                <span class="cursive">margin</span>, которые стоят по умолчанию необходимо обнулить.
+              </figcaption>
+            </figure>
 
             <img class="indent-dom__image" src="img/indent-dom5.jpg" alt="Скриншот с примером" />
 
@@ -208,25 +206,27 @@
               <img class="indent-group__image" src="img/indent-group1.jpg" alt="Картинка с полезными рецептами" />
             </figure>
 
-            <p class="indent-group__text">
-              В соответствии со вторым принципом: последний <span class="cursive">margin</span> обнуляется, а нижний
-              отступ задаётся через <span class="cursive">padding</span> для <span class="cursive">section</span>. Я
-              чаще всего задаю <span class="cursive">padding</span> для секции с обоих сторон, если расстояние между
-              секциями 100px задаю секциям <span class="cursive">padding-top:50px</span> и
-              <span class="cursive">padding-bottom:50px</span>.
-            </p>
+            <figure>
+              <figcaption class="indent-group__text">
+                В соответствии со вторым принципом: последний <span class="cursive">margin</span> обнуляется, а нижний
+                отступ задаётся через <span class="cursive">padding</span> для <span class="cursive">section</span>. Я
+                чаще всего задаю <span class="cursive">padding</span> для секции с обоих сторон, если расстояние между
+                секциями 100px задаю секциям <span class="cursive">padding-top:50px</span> и
+                <span class="cursive">padding-bottom:50px</span>.
+              </figcaption>
 
-            <img
-              class="indent-group__image indent-group__image_img"
-              src="img/indent-group2.jpg"
-              alt="Картинка с полезными рецептами"
-            />
+              <img
+                class="indent-group__image indent-group__image_img"
+                src="img/indent-group2.jpg"
+                alt="Картинка с полезными рецептами"
+              />
 
-            <img
-              class="indent-group__image indent-group__image_img"
-              src="img/indent-group3.jpg"
-              alt="Скриншот с примером"
-            />
+              <img
+                class="indent-group__image indent-group__image_img"
+                src="img/indent-group3.jpg"
+                alt="Скриншот с примером"
+              />
+            </figure>
 
             <figure class="indent-group__figure">
               <figcaption class="indent-group__text">
@@ -261,28 +261,28 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <section class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <h2 class="footer__title">Подытожим:</h2>
+      <section class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <h2 class="footer__title">Подытожим:</h2>
 
-          <ul class="footer__list">
-            <li class="footer__item">— отступы задаём от предыдущего элемента к следующему</li>
-            <li class="footer__item">— используем только margin-right и margin-bottom</li>
-            <li class="footer__item">— внешние отступы задаются только между соседями</li>
-            <li class="footer__item">— внутренний отступ задаём самому верхнему элементу в дом дереве</li>
-            <li class="footer__item">— последнему элементу группы отступ всегда обнуляем</li>
-          </ul>
+            <ul class="footer__list">
+              <li class="footer__item">— отступы задаём от предыдущего элемента к следующему</li>
+              <li class="footer__item">— используем только margin-right и margin-bottom</li>
+              <li class="footer__item">— внешние отступы задаются только между соседями</li>
+              <li class="footer__item">— внутренний отступ задаём самому верхнему элементу в дом дереве</li>
+              <li class="footer__item">— последнему элементу группы отступ всегда обнуляем</li>
+            </ul>
 
-          <p class="footer__text">
-            Конечно бывают исключения. Ведь макеты бывают различной сложности. Иногда базовые принципы приходится
-            нарушать в угоду дизайнерского решения или простоты вёрстки. Но для этого эти принципы необходимо хорошо
-            знать.
-          </p>
+            <p class="footer__text">
+              Конечно бывают исключения. Ведь макеты бывают различной сложности. Иногда базовые принципы приходится
+              нарушать в угоду дизайнерского решения или простоты вёрстки. Но для этого эти принципы необходимо хорошо
+              знать.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
   </body>
 </html>

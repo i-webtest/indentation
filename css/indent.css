@@ -1,6 +1,6 @@
 .indent {
   padding-top: 25px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .indent__title {
@@ -9,36 +9,23 @@
   margin-bottom: 30px;
 }
 
-.indent__list {
-  display: flow-root;
-}
-
-.indent__item {
-  float: right;
-}
-
-.indent__item:nth-child(1) {
-  max-width: 560px;
-  height: 415px;
+.indent__block {
   margin-bottom: 30px;
 }
 
-.indent__item:nth-child(2) {
-  max-width: 490px;
-  height: 415px;
-  margin-bottom: 30px;
+.indent__block-text {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 485px;
 }
 
-.indent__item:nth-child(3) {
-  max-width: 480px;
+.indent__block-text_left {
+  max-width: 475px;
+  margin-right: 40px;
 }
 
-.indent__item:nth-child(4) {
-  max-width: 560px;
-}
-
-.indent__item:not(:nth-child(2n)) {
-  float: left;
+.indent__img_margin {
+  margin-right: 30px;
 }
 
 .indent__text:not(:last-child) {
